@@ -7,7 +7,6 @@ charset-normalizer==3.3.2
 click==8.1.7
 contourpy==1.2.1
 cycler==0.12.1
-docutils @ file:///private/tmp/docutils-20231211-36728-9mhbst/docutils-0.20.1
 fonttools==4.53.1
 gitdb==4.0.11
 GitPython==3.1.43
@@ -21,14 +20,12 @@ MarkupSafe==2.1.5
 matplotlib==3.9.1.post1
 mdurl==0.1.2
 meson==1.5.0
-numpy @ file:///private/tmp/numpy-20240206-5894-1wazl8/numpy-1.26.4
 packaging==24.1
 pandas==2.2.2
 pillow==10.4.0
 plotly==5.23.0
 protobuf==5.27.2
 pyarrow==17.0.0
-pybind11 @ file:///private/tmp/pybind11-20231211-91223-x6mu2j/pybind11-2.11.1
 pydeck==0.9.1
 Pygments==2.18.0
 pyparsing==3.1.2
@@ -38,7 +35,6 @@ referencing==0.35.1
 requests==2.32.3
 rich==13.7.1
 rpds-py==0.19.1
-scipy @ file:///private/tmp/scipy-20240120-5908-d1mm1z/scipy-1.12.0
 six==1.16.0
 smmap==5.0.1
 streamlit==1.36.0
