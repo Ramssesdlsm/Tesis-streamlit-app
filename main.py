@@ -7,10 +7,9 @@ import plotly.graph_objects as go
 st.title('Simulación de la trayectoria de un proyectil')
 
 st.header('Condiciones iniciales')
-st.write('Aquí van las condiciones iniciales')
 seleccion_condiciones = st.selectbox('¿Desea trabajar con las condiciones iniciales por defecto', ('Sí', 'No'))
 if seleccion_condiciones == 'Sí':
-    cual_condicion = st.selectbox('Seleccione las condiciones iniciales con las que desea trabajar', ('Condiciones iniciales 1', 'Condiciones iniciales 2'))
+    cual_condicion = st.selectbox('Seleccione las condiciones iniciales con las que desea trabajar', ('Condiciones iniciales 2', 'Condiciones iniciales 1'))
     if cual_condicion == 'Condiciones iniciales 1':
         # Importamos las condiciones iniciales del archivo Condiciones_iniciales_sim_1.py
         from Condiciones_iniciales_sim_1 import masas, centros_de_gravedad, alturas_cuerpos, radios_cuerpos, parametros_combustible, velocidad, angulos, tiempo_integracion, escala_ruido
@@ -89,10 +88,10 @@ else:
 
 
 st.header('Perturbaciones')
-st.write('Aquí van las perturbaciones')
+
 seleccion_perturbaciones = st.selectbox('¿Desea trabajar con las perturbaciones por defecto?', ('Sí', 'No'))
 if seleccion_perturbaciones == 'Sí':
-    cual_perturbacion = st.selectbox('Seleccione las perturbaciones con las que desea trabajar', ('Perturbaciones 1', 'Perturbaciones 2'))
+    cual_perturbacion = st.selectbox('Seleccione las perturbaciones con las que desea trabajar', ('Perturbaciones 2', 'Perturbaciones 1'))
     if cual_perturbacion == 'Perturbaciones 1':
         # Cargamos el archivo de perturbación 1
         ruido_hist = np.loadtxt('Ruido_sim_1.txt', delimiter=',').tolist()
@@ -181,7 +180,7 @@ try:
     st.subheader('Con ajuste de parámetros de control')
     # Le pedimos al usuario que seleccione el alpha para el recocido simulado y el rango de generación de números aleatorios
     alpha = st.number_input('Alpha', value=0.9)
-    T = st.number_input('Temperatura inicial', value=1000)
+    T = st.number_input('Temperatura inicial', value=10000)
     T_min = st.number_input('Temperatura mínima', value=0.01)
     rango_numeros = st.number_input('Rango de generación de números aleatorios (de 0.0 al número elegido)', value=10.0)
     boton = st.button('Iniciar ajuste de parámetros de control')
